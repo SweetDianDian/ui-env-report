@@ -20,6 +20,17 @@ node bin/ui-env-report.js --help
 node bin/ui-env-report.js --version
 ```
 
+## 保存报告
+
+在工具仓库目录中运行下面的命令，将报告保存成可以附到 Issue 的文件：
+
+```sh
+node bin/ui-env-report.js /path/to/your-project > environment.md
+node bin/ui-env-report.js /path/to/your-project --json > environment.json
+```
+
+请把 `/path/to/your-project` 换成待排查项目的目录。文件保存在当前工作目录；`>` 会覆盖同名文件。命令失败时，请先处理终端中的错误，不要分享空报告。
+
 ## 报告内容
 
 - 实际运行此工具的 Node.js 版本、操作系统与 CPU 架构。
